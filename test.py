@@ -9,11 +9,12 @@ data = []
 for _ in range(100):
     name = fake.name()
     email = fake.email()
-    data.append([name, email])
+    phone = fake.address()
+    data.append([name, email , phone])
 
-df = pd.DataFrame(data, columns=['Name', 'Email'])
+df = pd.DataFrame(data, columns=['Name', 'Email','Phone'])
 
-df.to_excel('fake_data.xlsx', index=False)
+df.to_excel('fake_data_2.xlsx', index=False)
 
 
 
